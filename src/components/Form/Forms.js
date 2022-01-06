@@ -11,8 +11,8 @@ const Forms = () => {
         <Container>
             <Formik
                 initialValues={{
-                    email: '',
-                    password: ''
+                    email: 'challenge@alkemy.org',
+                    password: 'react'
                 }}
                 //Validate form
                 validate={(val) => {
