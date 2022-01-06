@@ -1,10 +1,12 @@
-import React from 'react'
+import React  from 'react'
 import {Form,Button,Container,Alert} from 'react-bootstrap';
 import { Formik,ErrorMessage } from 'formik';
 import useUser  from '../../hooks/useUser';
 
 const Forms = () => {
-    const {login,loadinLogin,loginError} = useUser();
+    const {login,loadinLogin,loginError,isLogged} = useUser();
+
+
     return (
         <Container>
             <Formik
@@ -32,8 +34,9 @@ const Forms = () => {
               
                 //Submit form
                 onSubmit={(values,{resetForm}) => {
-                login(values)
-          
+                login(values);
+               
+               
                 }}
                 
             >
@@ -64,8 +67,11 @@ const Forms = () => {
                             />
                             <ErrorMessage name="password" component={()=>(<Alert className='mt-4' variant='danger'>{errors.password}</Alert>)}  />
                         </Form.Group>
+                            { isLogged && <Alert className='mt-4' variant="success">Login Success</Alert>}
                             {loadinLogin && <Alert className='mt-4' variant="warning">Cheking Credentials...</Alert>}
-                            {loginError && <Alert className='mt-4' variant="danger">Login Fail</Alert>}  
+                            { loginError && <Alert className='mt-4' variant="danger">Login Fail</Alert>}
+                   
+                           
                         <Button variant="primary" type="submit">
                             Submit
                         </Button>

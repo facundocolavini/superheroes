@@ -1,29 +1,27 @@
 import Forms from '../Form/Forms';
 import React,{useEffect} from 'react'
 import useUser  from '../../hooks/useUser';
-import {Alert} from 'react-bootstrap';
+import {Container} from 'react-bootstrap';
 import { useLocation } from 'wouter';
 
 const Login = () => {
-    const [,navigate]= useLocation()
     const {isLogged} = useUser();
+    const [,navigate]= useLocation()
 
-    useEffect(() => {
-        console.log(isLogged,'isLogged');
+    useEffect(()=>{
         if(isLogged){
-            
-            setTimeout(() => {navigate('/')},3000)
-        }
-    } ,[isLogged,navigate])
-    return (
-        <>
-            <h2 className='container'>Login</h2>
-           
-            {isLogged 
-            ?<Alert className='container' variant="success">Login Successful</Alert>
-            :<Forms/>
+            setTimeout(()=>{
+                navigate('/')
             }
-        </>
+         ,3000)
+        }
+    },[isLogged,navigate])
+
+    return (
+        <Container>
+            <h2 className='container'>Login</h2>
+            <Forms/>
+        </Container>
     )
 }
 

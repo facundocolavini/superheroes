@@ -1,0 +1,7 @@
+.team-bkg{
+    background: rgb(42,42,42);
+    background: linear-gradient(to bottom, var(--brand-color-7), var(--brand-color-7));
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.5);
+    padding: 20px;
+    border-radius: 10px;
+}

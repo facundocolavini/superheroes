@@ -9,7 +9,7 @@ export default function login ({email,password}){
         },
         body:JSON.stringify({email,password})
     }).then(res => {
-        if(!res.ok)throw new Error('Error response is not ok');
+        if(!res.ok)throw new Error('Error response from server');
         return res.json()
     }).then(res => {
         const {token} = res;

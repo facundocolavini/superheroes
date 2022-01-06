@@ -1,8 +1,6 @@
 :root {
     --fz: 16px;
-    --theme--contrast-0: #121212;
-    --theme-body-bg: #18061f;
-    --theme-body-txt: #f3f3f3;
+
     --search-size-mx-h: 3rem;
     --zIndex-header: 20;
     --zIndex-component: 5;
@@ -12,4 +10,11 @@
     --brand-color_4: tomato;
     --brand-color_5: #fff35c;
     --brand-color_6: #8429de;
+    --l-gradient-1: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    --brand-color-7:#121212;
+    --brand-color-8:#2A2A2A;
+    --brand-color-9: #133AC3;
+    --brand-color-10:#2F3135;
+    --font-color-1:#9A9A9A;
+    --gradient-2:linear-gradient(to bottom, transparent 20%, black 100%, black 20%);;
   }

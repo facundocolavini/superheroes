@@ -4,7 +4,6 @@ import axios from 'axios';
 
 const SEARCH_ENDPOINT = baseurl('/search/');
 
-
 /*   export const searchHero = async (name) => {
     return await axios
       .get(`${SEARCH_ENDPOINT}${name}`, CONFIG)
@@ -16,9 +15,10 @@ const SEARCH_ENDPOINT = baseurl('/search/');
       });
   } */
 
-  export default async function  getHero ({keyword} )  {
+  export default async function  getHeros ({keyword} )  {
     return await axios
       .get(`${SEARCH_ENDPOINT}${keyword}`, CONFIG)
+        
       .then(res =>{
         return res.data.results;
       })   

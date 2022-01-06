@@ -11,27 +11,25 @@ const HeaderNavbar = () => {
         logout();
     }
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand>
-                    <Link className="link-nav" href="/">SuperHeroes</Link>
-                </Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto">
-                    </Nav>
-                    <Nav>
-                        <Link className="link-nav" to="/myteam">My Team</Link>
-                        {
-                            isLogged 
-                            ? <Button className="link-nav" onClick={handleClick}>Logout</Button> 
-                            : <Link className="link-nav" to="/login">Login</Link>
-                        }
-                    
-                    </Nav>
-                </Navbar.Collapse>
+                <Navbar collapseOnSelect expand="lg" className='navbar'  bg="transparent" variant="dark">
+                    <Navbar.Brand>
+                        <Link className="link-nav" href="/">Super<span className="text-variant">HERO</span></Link>
+                    </Navbar.Brand>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav className="me-auto"></Nav>
+                        <Nav>
+                            {
+                                isLogged 
+                                ? <Button className="btn-login" onClick={handleClick}>Logout</Button> 
+                                : <Link className="btn-login" to="/login">Login</Link>
+                            }
+                        
+                        </Nav>
+                    </Navbar.Collapse>
+                </Navbar>
             </Container>
-        </Navbar>
     )
 }
 

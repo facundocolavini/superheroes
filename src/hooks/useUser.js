@@ -16,12 +16,14 @@ export default function useUser(){
         })
         .catch(err => {
             setLoginStatus({loading:false,error:true});  
+            localStorage.removeItem('token');
             console.error(err);
         })
     },[setToken])
+
     const logout = useCallback(()=>{
-        setToken(null);
         localStorage.removeItem('token');
+        setToken(null);
     },[setToken])
    
 
