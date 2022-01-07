@@ -2,7 +2,7 @@ const ENDPOINT = "http://challenge-react.alkemy.org/"
 
 
 export default function login ({email,password}){
-    return fetch(`${ENDPOINT}`,{
+    return fetch(`http://cors-anywhere.herokuapp.com/${ENDPOINT}`,{
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
