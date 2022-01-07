@@ -19,7 +19,7 @@ const Login = () => {
 
     return (
         <Container>
-            <h2 className='container'>Login</h2>
+            <h2 className='container'>PITO </h2>
             <Forms/>
         </Container>
     )
