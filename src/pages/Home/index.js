@@ -9,19 +9,17 @@ import './Home.css';
 const Home = () => {
     const {isLogged} = useUser();
 
-
     return (
         <>
             {isLogged &&
             <Container> 
                 <Row className='mt-5 mb-5'>
-                    <Col  xs={12} lg={6}>
+                    <Col xs={12} lg={6}>
                         <h1 className='title-home text-md-start text-center'>Search your Hero</h1>   
                     </Col>
-                    <Col  xs={12} lg={6} >
-                        <SearchBar  />
+                    <Col xs={12} lg={6} >
+                        <SearchBar/>
                     </Col>
-              
                 </Row>
                 <Row>
                     <Team/>

@@ -16,18 +16,17 @@ function App() {
 
   return (
     <UserContextProvider>
-        <HerosContextProvider>
+      <HerosContextProvider>
       <TeamContextProvider>
-      <HeaderNavbar/>
-
-          <Switch>
-            <Route component={Login} path="/login"/>
-            <Route component={SearchResults} path="/search/:keyword"/>
-            <Route component={Home} path="/"/>
-            <Route component={Detail} path="/detail/:id"/>
-          </Switch>
-        </TeamContextProvider>  
-        </HerosContextProvider>
+        <HeaderNavbar/>
+        <Switch>
+          <Route component={Login} path="/login"/>
+          <Route component={SearchResults} path="/search/:keyword"/>
+          <Route component={Home} path="/"/>
+          <Route component={Detail} path="/detail/:id"/>
+        </Switch>
+      </TeamContextProvider>  
+      </HerosContextProvider>
     </UserContextProvider>
   );
 }

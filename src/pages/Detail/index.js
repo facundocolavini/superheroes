@@ -5,6 +5,7 @@ import Login from '../../components/Login';
 import CardDetails from '../../components/CardDetails';
 import Spinner from '../../components/Spinner';
 import { Redirect } from 'wouter';
+
 const Detail = ({params}) => {
     const {isLogged} = useUser();
     const {hero, isLoading, isError}=useSingleHero({id: params.id});
@@ -15,9 +16,9 @@ const Detail = ({params}) => {
        )
     }
     if(!isLogged){
-         return(
+        return(
             <Login/>
-         )
+        )
     }
     if (isError) return <Redirect to='/404'/>
     if(!hero) return null
@@ -26,9 +27,6 @@ const Detail = ({params}) => {
             {isLogged && <CardDetails {...hero} />}
         </>
     )
-            
-    
-   
 }
 
 export default Detail

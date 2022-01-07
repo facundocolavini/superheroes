@@ -1,6 +1,5 @@
 const ENDPOINT = "http://challenge-react.alkemy.org/"
 
-
 export default function login ({email,password}){
     return fetch(`${ENDPOINT}`,{
         method: 'POST',

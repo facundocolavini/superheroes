@@ -1,8 +1,9 @@
 import Forms from '../Form/Forms';
 import React,{useEffect} from 'react'
 import useUser  from '../../hooks/useUser';
-import {Container} from 'react-bootstrap';
+import {Col} from 'react-bootstrap';
 import { useLocation } from 'wouter';
+import './Login.css'
 
 const Login = () => {
     const {isLogged} = useUser();
@@ -18,10 +19,10 @@ const Login = () => {
     },[isLogged,navigate])
 
     return (
-        <Container>
-            <h2 className='container'>Login</h2>
-            <Forms/>
-        </Container>
+        <Col  xs={12}>
+            <h2 className='container text-center text-login'>Login</h2>
+            <Forms className='m-auto'/>
+        </Col>
     )
 }
 

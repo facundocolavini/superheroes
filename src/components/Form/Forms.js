@@ -2,10 +2,9 @@ import React  from 'react'
 import {Form,Button,Container,Alert} from 'react-bootstrap';
 import { Formik,ErrorMessage } from 'formik';
 import useUser  from '../../hooks/useUser';
-
+import './Form.css'
 const Forms = () => {
     const {login,loadinLogin,loginError,isLogged} = useUser();
-
 
     return (
         <Container>
@@ -31,21 +30,18 @@ const Forms = () => {
                     }
                     return errors;
                 }}
-              
                 //Submit form
                 onSubmit={(values,{resetForm}) => {
-                login(values);
-               
-               
-                }}
-                
+                    login(values);
+                }} 
             >
                 
                 {({values,errors , handleSubmit ,handleChange ,handleBlur })=>(
-                    <Form onSubmit={handleSubmit}>
+                    <Form className='form-container ' onSubmit={handleSubmit}>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Email address</Form.Label>
+                            <Form.Label className='text-label'>Email address</Form.Label>
                             <Form.Control 
+                                className='form-input w-100'
                                 name="email" 
                                 type="email" 
                                 placeholder="Enter email" 
@@ -56,8 +52,9 @@ const Forms = () => {
                             <ErrorMessage name="email" component={()=>(<Alert className='mt-4' variant='danger'>{errors.email}</Alert>)}/>
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Label >Password</Form.Label>
+                            <Form.Label className='text-label' >Password</Form.Label>
                             <Form.Control 
+                                className='form-input w-100'
                                 name="password" 
                                 type="password" 
                                 placeholder="Password" 
@@ -67,12 +64,12 @@ const Forms = () => {
                             />
                             <ErrorMessage name="password" component={()=>(<Alert className='mt-4' variant='danger'>{errors.password}</Alert>)}  />
                         </Form.Group>
-                            { isLogged && <Alert className='mt-4' variant="success">Login Success</Alert>}
-                            {loadinLogin && <Alert className='mt-4' variant="warning">Cheking Credentials...</Alert>}
-                            { loginError && <Alert className='mt-4' variant="danger">Login Fail</Alert>}
+                            { isLogged && <Alert className='mt-4 w-auto alert' variant="success">Login Success</Alert>}
+                            {loadinLogin && <Alert className='mt-4 ' variant="warning">Cheking Credentials...</Alert>}
+                            { loginError && <Alert className='mt-4 w-auto' variant="danger">Login Fail</Alert>}
                    
                            
-                        <Button variant="primary" type="submit">
+                        <Button variant="primary" className='btn-form-submit' type="submit">
                             Submit
                         </Button>
                     </Form>

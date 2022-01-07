@@ -1,19 +1,12 @@
 .navbar{
     background:transparent;
-
- 
     width: 100%;
-
-
 }
-
 .link-nav{
     color: #fff;
     text-decoration: none;
     margin-left: 10px;
     font-weight: bold;
-
-
 }
 .link-nav:hover{
     color:grey;
@@ -41,9 +34,6 @@
     font-weight: bold;
     margin-left: 10px;
     cursor: pointer;
-
-    
-    
 }
 .btn-login:hover{
     background: linear-gradient(to bottom, rgba(50, 2, 109, 0.5), rgb(66, 4, 182));

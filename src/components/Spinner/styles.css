@@ -39,6 +39,7 @@
 	background-color: var(--brand-color_5);
 }
 
+
 @keyframes bouncer {
 	100% {
 		transform: scale(1.75) translateY(-20px);

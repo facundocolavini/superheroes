@@ -7,10 +7,8 @@ const PowerStatsHero = ({powerStats}) => {
             <Row>
                 <Col >
                     {
-                        
                         powerStats.map((stat,i) => (
                             <div key={i} className="progress" style={{background:"#151515",height:"25px"}} >
-                            
                                 <div
                                     className="progress-bar"
                                     role='progressbar'
@@ -22,15 +20,11 @@ const PowerStatsHero = ({powerStats}) => {
                                 >
                                     {`${stat.name} : ${stat.value}`}
                                 </div>
-                                
                             </div>
-
                         ))
-                        
                     }
                 </Col>
             </Row>
-
         </Container>
     )
 }

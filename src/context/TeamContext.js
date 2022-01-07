@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-
 import useHeros from '../hooks/useHeros';
+
 const Context = React.createContext({});
 
 export function TeamContextProvider({children}) {
@@ -11,22 +11,17 @@ export function TeamContextProvider({children}) {
     const {heros} = useHeros();
    
 
-
     const isInTeam = (id) => {
         return team.find(h => h.id === id)
     }
-
     const addToTeam = (id) => {
         let hero = heroFilter(id)
         newHero(hero)
     }
-
     const removeFromTeam = (id) => {
         setTeam(team.filter(h => h.id !== id))
     }
-
     const heroFilter = (id) => heros.filter(hero => hero.id === id)[0];
-
     const newHero = (hero) => {
         const countAligment = (aligment) => {
             return team.reduce((count,hero) => hero.biography.alignment === aligment ? ++count : count,0)
@@ -57,10 +52,8 @@ export function TeamContextProvider({children}) {
             console.log(error);
         }else{
             setTeam([...team,hero])
-            console.log(team);
         }
     }
-
     const totalPowerStats = () => {
 
         const powerStats = team.reduce((stats,hero) => {
@@ -83,7 +76,6 @@ export function TeamContextProvider({children}) {
         })
         return [powerStats].sort((a,b) => b-a);
     }
-
     const heroPowerStats = (arrStats) => {
         const namesStat = Object.keys(arrStats[0]);
         const valuesStat = Object.values(arrStats[0]);
@@ -144,8 +136,6 @@ export function TeamContextProvider({children}) {
             averageMeasure,
             team,
             error
-
-
         }}>
             {children}
         </Context.Provider>
