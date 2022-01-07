@@ -6,7 +6,7 @@ Diseño responsive con Bootstrap 5 para los elementos personalizados cree archiv
 Se implemento el uso de estados con REACT para la comunicación entre componentes. Para mostrar su contenido será necesario consumir una base de datos en la cual tenemos todos los superheores a encontrar.Se utilizaron Hooks customizados para mantener los componentes limpios. 
 
  
-![SuperHero App](/superhero-app.png)
+![superhero-app](https://user-images.githubusercontent.com/54385792/148612797-6285dc86-a7b9-40bc-a041-d7df4fe44c44.png)
 
 # Deploy 
 
