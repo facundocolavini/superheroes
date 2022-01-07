@@ -7,6 +7,7 @@ export default function login ({email,password}){
         headers: {
             'Content-Type': 'application/json',
             ' Accept': 'application/json',
+            'cross-origin': 'true'
 
         },
         body:JSON.stringify({email,password})
