@@ -1,4 +1,4 @@
-const ENDPOINT = "https://challenge-react.alkemy.org/"
+const ENDPOINT = "http://challenge-react.alkemy.org/"
 
 
 export default function login ({email,password}){
@@ -6,9 +6,6 @@ export default function login ({email,password}){
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            ' Accept': 'application/json',
-            'cross-origin': 'true'
-
         },
         body:JSON.stringify({email,password})
     }).then(res => {

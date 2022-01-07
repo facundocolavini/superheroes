@@ -5,10 +5,13 @@ export default function useHeros ({keyword} = {keyword:null}) {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
     const {heros, setHeros} = useContext(HerosContext);
+
+    const lastKeywordUse =  keyword || localStorage.getItem('lastKeyword') || 'superman';
     useEffect(function(){
+        
         setLoading(true);
         //Get the las keyword searched
-        const lastKeywordUse =  keyword || localStorage.getItem('lastKeyword') || 'superman';
+       
         getHeros({keyword : lastKeywordUse})
         .then(hero=>{
             setHeros(hero);

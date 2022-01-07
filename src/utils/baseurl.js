@@ -5,6 +5,7 @@ export function baseurl(endpoint) {
   
   export const CONFIG = {
     headers: {
+      'crossDomain': true,
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow': 'Content-Type',
       'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',

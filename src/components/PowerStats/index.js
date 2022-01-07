@@ -27,7 +27,7 @@ const PowerStats = ({powerStats,measure}) => {
                     }
                 </Col>
                 <Col lg={6} md={12} xs={12} className='team-measures '>
-                        <h3 class="title-measures text-xs-center">Measures Team</h3>
+                        <h3 className="title-measures text-xs-center">Measures Team</h3>
                         <div className="measures-content ">
                             <span className="measure-text"><span className='text-varian-measure '>Average Height:</span>  {measure.totalHeight}Kg</span>
                             <span className="measure-text"><span className='text-varian-measure'>Average Weight:</span>  {measure.totalWeight}Cm</span>

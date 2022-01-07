@@ -5,6 +5,7 @@ import ItemsList  from '../../components/ItemsList';
 import useHeros from '../../hooks/useHeros';
 import useUser from '../../hooks/useUser';
 import Login from '../../components/Login';
+import Spinner from '../../components/Spinner';
 const SearchResults = ({params}) => {
     const keyword = params.keyword
     const {isLogged} = useUser();
@@ -19,10 +20,11 @@ const SearchResults = ({params}) => {
             :<h1>Searching for {keyword}...</h1>}
         
             {loading 
-            ? <h1>Loading...</h1>
-            : !heros &&
-                <h1>Hero not found</h1>}
-            {heros && <ItemsList items={heros} />}
+            ? <Spinner/>
+            : heros ? <ItemsList items={heros}/> : <h1>No results</h1>}
+                
+
+
             
             
             </Container>

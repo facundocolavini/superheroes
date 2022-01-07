@@ -19,7 +19,6 @@ const CardItem = ({id,name,image,powerstats,biography}) => {
         team.removeFromTeam(id);
         
     }
-    console.log(image,'image');
     return (
         <Col lg={3} md={4}>
 {/*         <Card id={id} className='card mt-3'>

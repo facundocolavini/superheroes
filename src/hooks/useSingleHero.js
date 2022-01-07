@@ -17,9 +17,7 @@ export default function useSingleHero ({id}) {
       // llamar al servicio si no tenemos heros en cache
       getHeroById({id})
         .then(hero => {
-      
-            setHero(hero)
-   
+          setHero(hero)
           setIsLoading(false)
           setIsError(false)
         }).catch(err => {
