@@ -1,8 +1,8 @@
-const ENDPOINT = "HTTPS://challenge-react.alkemy.org/"
+const ENDPOINT = "https://challenge-react.alkemy.org/"
 
 
 export default function login ({email,password}){
-    return fetch(`http://cors-anywhere.herokuapp.com/${ENDPOINT}`,{
+    return fetch(`${ENDPOINT}`,{
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
