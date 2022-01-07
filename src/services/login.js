@@ -1,4 +1,4 @@
-const ENDPOINT = "http://challenge-react.alkemy.org/"
+const ENDPOINT = "HTTPS://challenge-react.alkemy.org/"
 
 
 export default function login ({email,password}){
